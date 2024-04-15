@@ -6,6 +6,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'My Docs',
+			components:{
+				TableOfContents: '/src/components/TableOfContents.astro'
+			},
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
