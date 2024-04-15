@@ -431,6 +431,11 @@
     hastscript "^7.2.0"
     unist-util-visit-parents "^5.1.3"
 
+"@feelback/js@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@feelback/js/-/js-0.3.4.tgz#1f3c885817b2d46230e922ac84c0b79a76d1a1c4"
+  integrity sha512-xr7gTqSJcVUYQlELs1TntYovCBjMcYUr/hGKTnDoF64/lig5CbX4bOmqLoF50IImCy5q3oIwg9w+TSFvtBwsIA==
+
 "@fontsource/outfit@^5.0.12":
   version "5.0.12"
   resolved "https://registry.npmjs.org/@fontsource/outfit/-/outfit-5.0.12.tgz"
@@ -857,6 +862,17 @@ astro-expressive-code@^0.33.4:
     hast-util-to-html "^8.0.4"
     remark-expressive-code "^0.33.5"
 
+astro-feelback@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/astro-feelback/-/astro-feelback-0.3.4.tgz#0d2f31d67d51f5eca2952ee9f35bf2b9f429ec37"
+  integrity sha512-ra69QTsdyjzQKdYeu+qngNcPOgspaWOFJLDFdpA/JryGo55uruw76455UVt2rf3NsZulBnYHS6+upPIO5O7t7A==
+  dependencies:
+    "@feelback/js" "0.3.4"
+
+astro@^4.3.5:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-4.6.0.tgz#a269c040d18050012ad2be79613b2eff79cd07c9"
+  integrity sha512-zys+COED1Zs/PurkgAFc/f93e2jACMv7XeC+CyDNBgdE9v2b7rlVPRu054j2nTrQTzGQ7kst2/waQrDbs6e1aA==
 astro@^4.0.0, "astro@^4.0.0-beta || ^3.3.0", astro@^4.2.7, astro@^4.3.5:
   version "4.6.1"
   dependencies:
