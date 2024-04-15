@@ -7,6 +7,9 @@ export default defineConfig({
       title: 'TractStack Docs',
       pagefind: false,
       favicon: 'favicon.ico',
+	  components:{
+		TableOfContents: '/src/components/TableOfContents.astro'
+	  },
       logo: {
         src: '/src/assets/tractstack-banner-logo.png',
         replacesTitle: true,
