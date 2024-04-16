@@ -24,12 +24,11 @@ export default defineConfig({
           lang: 'fr',
         },
       },
-	  // TODO: Fill this in with actual data at some point.
-      // social: {
-      //   github: '',
-      //   linkedin: '',
-      //   email: '',
-      // },
+	  social: {
+		github: 'https://github.com/AtRiskMedia',
+		twitter: 'https://twitter.com/AtRiskMedia',
+		discord:'',
+	  },
       customCss: [
         '@fontsource/outfit',
         './src/styles/custom.css',
