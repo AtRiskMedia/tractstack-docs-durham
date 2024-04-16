@@ -15,12 +15,12 @@ export default defineConfig({
       src: '/src/assets/tractstack-banner-logo.png',
       replacesTitle: true
     },
-    defaultLocale: 'en',
     locales: {
-      en: {
-        label: 'English'
+      root: {
+        label: 'English',
+        lang: 'en',
       },
-      fr: {
+      'fr': {
         label: 'Français',
         lang: 'fr'
       }
