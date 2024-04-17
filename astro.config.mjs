@@ -20,10 +20,6 @@ export default defineConfig({
         label: 'English',
         lang: 'en',
       },
-      'fr': {
-        label: 'Français',
-        lang: 'fr'
-      }
     },
     social: {
       github: 'https://github.com/AtRiskMedia',
