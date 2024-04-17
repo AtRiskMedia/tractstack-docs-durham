@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets'
+import example1Logo from './src/assets/houston.webp'
+import example2Logo from './src/assets/houston.webp'
+import example3Logo from './src/assets/houston.webp'
+
+const sponsors = [
+  {
+    name: 'Example',
+    img: example1Logo,
+    url: 'https://example.com',
+    size: 'large'
+  },
+  {
+    name: 'Example',
+    img: example2Logo,
+    url: 'https://example.com'
+  },
+  {
+    name: 'Example',
+    img: example3Logo,
+    url: 'https://example.com'
+  },
+]
+---
+
+<section class="flex flex-wrap rounded-xl overflow-hidden gap-1 w-full my-4">
+  {sponsors.map(sponsor => (
+    <a href={sponsor.url} class={sponsor.size ?? ''}>
+      <article class="flex bg-slate-800 justify-center items-center p-6 w-full hover:bg-slate-500">
+        <h4 class="absolute w-px h-px whitespace-nowrap overflow-hidden">{sponsor.name}</h4>
+        <Image height={sponsor.size === 'large' ? 72 : 36} src={sponsor.img} alt={sponsor.name}/>
+      </article>
+    </a>
+  ))}
+</section>
+
+<style>
+    a {
+      width: 34%;
+      flex-grow: 1;
+    }
+    a.large {
+      width: 100%;
+    }
+
+
+
+  </style>
