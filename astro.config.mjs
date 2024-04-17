@@ -54,6 +54,14 @@ export default defineConfig({
       items: [
         // { label: '', link: '/' },
       ]
-    }]
+    }, {
+      label: 'Internal Reference',
+      items: [
+        { label: 'Content Highlighting', link: '/internal-reference/content-highlighting' },
+        { label: 'Tab Component', link: '/internal-reference/tab-component' },
+        { label: 'Aside Component', link: '/internal-reference/aside-component' },
+      ]
+    },
+  ]
   }), tailwind()]
 });
