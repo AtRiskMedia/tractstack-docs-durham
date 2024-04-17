@@ -1,11 +1,10 @@
 ---
 import FeelbackTaggedMessage from "astro-feelback/components/FeelbackTaggedMessage.astro";
 import "astro-feelback/styles/feelback.css";
-const CONTENT_SET_ID = import.meta.env.PUBLIC_CONTENTID;
 ---
 
 <FeelbackTaggedMessage
-    contentSetId={CONTENT_SET_ID}
+    contentSetId={import.meta.env.CONTENTID}
     preset="feedback"
     title="Was this page useful?"
     layout="reveal-message"
