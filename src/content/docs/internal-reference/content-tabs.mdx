@@ -1,0 +1,31 @@
+---
+title: Astro Tabs
+description: Here, you will learn all about tabs in Astro Starlight
+---
+
+import {Tabs, TabItem } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
+
+Among the many useful features provided by Astro Starlight, is the ability to place content into tabs. These 
+tabs can be used to break up information so less space will be taken up while still providing needed information. One example for a tab to be 
+useful is to show multiple ways to create a new project.
+
+<Tabs>
+    <TabItem label="npm">
+        ```bash title=""
+        npm create astro@latest
+        ```
+    </TabItem>
+    <TabItem label="pnpm">
+        ```bash title=""
+        pnpm create astro@latest
+        ```
+    </TabItem>
+    <TabItem label="Yarn">
+        ```bash title=""
+        yarn create astro
+        ```
+    </TabItem>
+</Tabs>
+
+Tabs make it very easy to display information in a clear and concise way for the user in minimal space
