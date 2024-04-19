@@ -58,6 +58,7 @@ export default defineConfig({
       label: 'Internal Reference',
       items: [
         { label: 'Content Highlighting', link: '/internal-reference/content-highlighting' },
+        { label: 'Tab Component', link: '/internal-reference/tab-component' },
       ]
     },
   ]

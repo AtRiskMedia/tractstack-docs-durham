@@ -1,0 +1,86 @@
+---
+title: Tab Component
+description: Here, you can learn about the Tab Component offered within Astro Starlight. !! INTERNAL REFERENCE ONLY !!
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
+
+export const tabComponent_Code = `import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Tabs>
+  <TabItem label="Click Here" >
+    This is where
+  </TabItem>
+  <TabItem label="Click Here">
+    the tab component comes into play.
+  </TabItem>
+</Tabs>`;
+
+export const tabComponent_CodeIcon = `import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Tabs>
+  <TabItem label="School!" icon="pencil">
+    In the label of this tab, we have a pencil icon.
+  </TabItem>
+  <TabItem label="Detective!" icon="manifier">
+    In the label of this tab, we have a magnifying glass.
+  </TabItem>
+  <TabItem label="Warning!" icon="warning">
+    In the label of this tab, we have a warning icon.
+  </TabItem>
+  <TabItem label="GitHub!" icon="github">
+    In the label of this tab, we have the GitHub logo.
+  </TabItem>
+</Tabs>`;
+
+You can almost always expect the pages of your documentation to be filled to the brim with content.
+A lot of the time, you'll get lost in your writing but then take a step back and realize that you've written
+a lot more than you initially intended, and now your users have to scrounge through 100 mouse scrolls worth of content.
+
+With this being a major concern during the documentation development process, Astro Starlight has taken the liberty of
+incorporating a component that'll change the way you stash your content.
+
+<Tabs>
+  <TabItem label="Click Here" >
+    #### This is where
+  </TabItem>
+  <TabItem label="Click Here">
+    #### the tab component comes into play.
+  </TabItem>
+</Tabs>
+
+By utilizing the tab component featured above, you have the ability to condense the most important, and the most
+relevant content on your pages into an easily readable, and easily accessible manner.
+
+The way in which you would implement this is as follows: 
+
+<Code code={tabComponent_Code} lang="mdx"/>
+
+The code present in the block showcases how I implemented the tab component above. Within the code block, you are able to use 
+more Astro Starlight components to further control the look of your tabs. Within the brackets of the \<TabItem\>, you are able to use the "icon="""
+attribute to add a little icon in your tab like so:
+
+<Tabs>
+  <TabItem label="School!" icon="pencil">
+    #### In the label of this tab, we have a pencil icon.
+  </TabItem>
+  <TabItem label="Detective!" icon="manifier">
+    #### In the label of this tab, we have a magnifying glass.
+  </TabItem>
+  <TabItem label="Warning!" icon="warning">
+    #### In the label of this tab, we have a warning icon.
+  </TabItem>
+  <TabItem label="GitHub!" icon="github">
+    #### In the label of this tab, we have the GitHub logo.
+  </TabItem>
+</Tabs>
+
+And as stated above, the way in which you would implement this is by using the "icon=""" attribute, so the code would look as follows:
+
+<Code code={tabComponent_CodeIcon} lang="mdx"/>
+
+Tabs provide an incredibly simple and intuitive way to condense the content on your page into an easily readable and accessible format.
+Documentation gets wordy, and sometimes we need a way to simplify things, as well as condense things so our users aren't sifting through mounds
+of information that may not be relevant to them. Having the ability to jump to the specific area you need without having to utilize key-binds like "CTRL + F" certainly guarantees 
+the best user experience.
