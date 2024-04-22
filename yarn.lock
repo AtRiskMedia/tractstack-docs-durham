@@ -118,6 +118,15 @@
     sitemap "^7.1.1"
     zod "^3.22.4"
 
+"@astrojs/sitemap@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/sitemap/-/sitemap-3.1.4.tgz#9805bd69343572c9da2febd722cbca9797f66f94"
+  integrity sha512-po8CqDCK14O6phU1mB5C8SyVLyQEa+7pJM8oXxs1mVh8DgvxxaA5E7lak1vzOmBcyyyHBW32jakGqNYc66sBRw==
+  dependencies:
+    sitemap "^7.1.1"
+    stream-replace-string "^2.0.0"
+    zod "^3.22.4"
+
 "@astrojs/starlight@^0.21.5":
   version "0.21.5"
   resolved "https://registry.npmjs.org/@astrojs/starlight/-/starlight-0.21.5.tgz"
@@ -1754,9 +1763,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.668:
-  version "1.4.738"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.738.tgz#9a7fca98abaee61e20c9c25013d5ce60bb533436"
-  integrity sha512-lwKft2CLFztD+vEIpesrOtCrko/TFnEJlHFdRhazU7Y/jx5qc4cqsocfVrBg4So4gGe9lvxnbLIoev47WMpg+A==
+  version "1.4.740"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.740.tgz#89c82421332ee425e5b193e3db2dea019d423419"
+  integrity sha512-Yvg5i+iyv7Xm18BRdVPVm8lc7kgxM3r6iwqCH2zB7QZy1kZRNmd0Zqm0zcD9XoFREE5/5rwIuIAOT+/mzGcnZg==
 
 emmet@^2.4.3:
   version "2.4.7"
@@ -4217,6 +4226,11 @@ stdin-discarder@^0.1.0:
   integrity sha512-xhV7w8S+bUwlPTb4bAOUQhv8/cSS5offJuX8GQGq32ONF0ZtDWKfkdomM3HMRA+LhX6um/FZ0COqlwsjD53LeQ==
   dependencies:
     bl "^5.0.0"
+
+stream-replace-string@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/stream-replace-string/-/stream-replace-string-2.0.0.tgz#e49fd584bd1c633613e010bc73b9db49cb5024ad"
+  integrity sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==
 
 streamx@^2.13.0, streamx@^2.15.0:
   version "2.16.1"

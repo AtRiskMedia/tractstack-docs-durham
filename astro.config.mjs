@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import tailwind from "@astrojs/tailwind";
+import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -55,5 +56,8 @@ export default defineConfig({
         // { label: '', link: '/' },
       ]
     }]
-  }), tailwind()]
+  }), tailwind({
+    applyBaseStyles: false,
+  }), [sitemap()],
+]
 });
