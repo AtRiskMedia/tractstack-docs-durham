@@ -27,7 +27,7 @@ export default defineConfig({
       discord: 'https://twitter.com/AtRiskMedia'
     },
     customCss: ['@fontsource/outfit', './src/styles/custom.css'],
-    sidebar: [{
+    sidebar: [{ // Start Here Tab
       label: 'Start here!',
       items: [{
         label: 'Getting Started',
@@ -35,29 +35,82 @@ export default defineConfig({
         badge: {
           text: 'Important!',
           variant: 'success'
-        }
+        },
+      },
+      {
+        label: 'Installation',
+        link: '/start-here/installation',
+      },
+      {
+        label: 'Price Points',
+        link: '/start-here/price-points',
       }
-      // { label: '', link: '/' },
       ]
-    }, {
+    }, { // Core Concepts Tab
       label: 'Core Concepts',
       items: [
-        // { label: '', link: '/' },
+        {
+          label: 'Why Tractstack',
+          link: '/core-concepts/why-tractstack',
+        },
       ]
-    }, {
+    }, { // Tutorials Tab
       label: 'Tutorials',
       items: [
-        // { label: '', link: '/' },
+        {
+          label: 'Publish your Website',
+          link: '/tutorials/publish',
+        },
+        {
+          label: 'Edit Panes',
+          link: '/tutorials/edit-pane',
+        }
       ]
-    }, {
+    }, { // Basics Tab
       label: 'Basics',
       items: [
-        // { label: '', link: '/' },
+        {
+          label: 'Dashboard',
+          link: '/basics/dashboard',
+        },
+        {
+          label: 'Story Keep',
+          link: '/basics/story-keep',
+        },
+        {
+          label: 'Knowledge Graph',
+          link: '/basics/knowledge-graph',
+        },
+        {
+          label: 'Story Fragments',
+          link: '/basics/story-fragments',
+        },
+        {
+          label: 'Panes',
+          link: '/basics/panes',
+        },
+        {
+          label: 'Resources',
+          link: '/basics/resources',
+        }
       ]
-    }, {
+    }, { // Internal Reference Tab
       label: 'Internal Reference',
       items: [
         { label: 'Content Highlighting', link: '/internal-reference/content-highlighting' },
+      ]
+    },
+    { // Integrations Tab
+      label: 'Integrations',
+      items: [
+        {
+          label: 'Neo4j',
+          link: '/integrations/neo4j',
+        },
+        {
+          label: 'Shopify',
+          link: '/integrations/shopify'
+        }
       ]
     },
   ]
