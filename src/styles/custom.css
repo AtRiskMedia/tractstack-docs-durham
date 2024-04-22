@@ -18,16 +18,16 @@
 /* Light mode colors. */
 :root[data-theme='light'] {
 	--sl-color-accent-low: #341240;
-	--sl-color-accent: rgb(104, 104, 207); /* Highlighted page on navbar, some headings and social icons */
+	--sl-color-accent: rgba(104, 104, 207, 0.7); /* Highlighted page on navbar, some headings and social icons */
 	--sl-color-accent-high: #f58333;
 	--sl-color-white: #17181c; /* Heading tags */
-	--sl-color-gray-1: #fcfcfc; /* Dark/Light theme tag */
+	--sl-color-gray-1: black; /* Dark/Light theme tag */
 	--sl-color-gray-2: black; /* Tagline/paragraph */
 	--sl-color-gray-3: #a7b1b7;
 	--sl-color-gray-4: #a7b1b7;
 	--sl-color-gray-5: black; /* Divider line between socials and Light/Dark theme on header*/
 	--sl-color-gray-6: #a7b1b7; /* Divider line seperating the TOC from the main page */
-	--sl-color-gray-7: #a7b1b7; /* Header */
+	--sl-color-gray-7: rgba(200, 223, 140, 0.3); /* Header */
 	--sl-color-black: #fcfcfc; /* Cards/Navbar */
 	--bg-image: #fcfcfc;
 }
