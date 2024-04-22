@@ -99,6 +99,7 @@ export default defineConfig({
       items: [
         { label: 'Content Highlighting', link: '/internal-reference/content-highlighting' },
         { label: 'Tab Component', link: '/internal-reference/tab-component' },
+        { label: 'Card Component', link: '/internal-reference/card-component' },
       ]
     },
     { // Integrations Tab

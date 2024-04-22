@@ -1,0 +1,74 @@
+---
+title: Card Component
+description: Here, you can learn about the Card Component offered within Astro Starlight. !! INTERNAL REFERENCE ONLY !!
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Code } from '@astrojs/starlight/components';
+
+export const cardComponent_Code = `import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<Card title="Check this out!">This is where cards come in!</Card>
+
+<CardGrid>
+  <Card title="Concise">
+    Look at how concise this is.
+  </Card>
+  <Card title="Imagine">
+    Imagine reading documentation with info laid out like this.
+  </Card>
+</CardGrid>`;
+
+export const cardComponent_CodeIcon = `import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<Card title="Check this out!">This is where cards come in!</Card>
+
+<CardGrid>
+  <Card title="Concise" icon="github">
+    Look at how concise this is.
+  </Card>
+  <Card title="Imagine" icon="star">
+    Imagine reading documentation with info laid out like this.
+  </Card>
+</CardGrid>`;
+
+Astro Staright's card component is designed to simpify docuemtnation and improve the user experience. By organizing your content into concise, visually appealing cards,
+you can create a more streamlined and efficiency learninmg experience. This means that you can allow yuor users to quickly find what they need, absorb those key concepts, 
+and take action in their TractStack journey -- All in a streamlined way, without getting lost in an ocean of convoluted text that takes years to sift through.
+
+<Card title="Check this out!">This is where cards come in!</Card>
+
+<CardGrid>
+  <Card title="Concise">
+    Look at how concise this is.
+  </Card>
+  <Card title="Imagine">
+    Imagine reading documentation with info laid out like this.
+  </Card>
+</CardGrid>
+
+By leveraging the card component, you can elegently package your content into concise, and easily digestible tid-bits that allow you to prioritize 
+the most useful information. This makes it incredibly readable, and easiy accessible for everybody that is looking to dive into TractStack.
+
+To implement this, follow these steps: 
+
+<Code code={cardComponent_Code} lang="mdx"/>
+
+The code present in the block showcases how I implemented the cards above. When implementing your card components, you are able to use 
+more Astro Starlight components to further control the look of your cards. Within the brackets of the \<Card\>, you are able to use the "icon="""
+attribute, as well as the "title=""" to add a little icon and title into your card like so:
+
+<CardGrid>
+  <Card title="Concise" icon="github">
+    Look at how concise this is.
+  </Card>
+  <Card title="Imagine" icon="star">
+    Imagine reading documentation with info laid out like this.
+  </Card>
+</CardGrid>
+
+<Code code={cardComponent_CodeIcon} lang="mdx"/>
+
+Cards provide a clean and organized way to break down complex content into manageable tidbits. We've all been there - Stuck in the ocean of text looking for
+one piece of information, struggling to find it. This makes cards one of the most incredible assets that you can find and utilize while working with Astro Starlight.
+By compartmentalizing your content into clear, concise cards, you can help users quickly find what they are looking for without drowning them in information they may not need.
