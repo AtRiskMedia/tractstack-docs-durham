@@ -61,5 +61,7 @@ export default defineConfig({
       ]
     },
   ]
-  }), tailwind()]
+  }), tailwind({
+    applyBaseStyles: false,
+  })]
 });
