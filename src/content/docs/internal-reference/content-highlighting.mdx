@@ -1,0 +1,48 @@
+---
+title: Content Highlighting
+description: Here, you can learn about the different kinds of content highlighting components that are offered within Astro Starlight. !! INTERNAL REFERENCE ONLY !!
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+export const exampleCode = `import { Code } from '@astrojs/starlight/components';
+
+export const exampleCode = \`console.log('This could come from a file or CMS!')\`;
+export const fileName = 'example.js';
+export const highlights = ['file', 'CMS'];
+
+<Code code={exampleCode} lang="js" title={fileName} mark={highlights} />`;
+
+export const exampleCode_output = `console.log('This could come from a file or CMS!');`;
+export const fileName = 'example.js';
+export const highlights = ['file', 'CMS'];
+
+export const tractStackBuildCode_block = `\import { Code } from '@astrojs/starlight/components';
+export const tractStackBuildCode_output = \`sudo ./build.sh front birch\`;\``;
+
+export const tractStackBuildCode_output = `sudo ./build.sh front birch`;
+
+
+As a part of any well-made documentation site, drawing attention to key content for the benefit of site visitors is imperative.
+Astro Starlight provides an extensive library of components and integrations that are designed for this purpose. Amongst the extensive library stands 
+the ability to highlight code content through the use of code blocks. These code blocks serve as powerful tools, enabling you to showcase snippets of code, scripts,
+or configurations in a visually distinct and easily digestible manner. By leveraging this integration, you can ensure that crucial information such as the TractStack installation process
+stands outerHeight, allowing for clearer communication, and enhancing the overall user experience.
+
+
+### How to implement
+
+The basic syntax for getting a code block goes as follows.
+
+<Code code={exampleCode} lang="mdx"/>
+
+The output of the code above would be:
+<Code code={exampleCode_output} lang="js" title={fileName} mark={highlights} />
+
+By applying this logic to showcase TractStack build scripts, we are able to present the scripts in a way that looks like this
+
+<Code code={tractStackBuildCode_block} lang="mdx"/>
+
+By building the presented codeblock as we did above, it would output the following codeblock: 
+
+<Code code={tractStackBuildCode_output} lang="bash"/>

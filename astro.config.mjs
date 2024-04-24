@@ -51,6 +51,32 @@ export default defineConfig({
         // { label: '', link: '/' },
       ]
     }, {
+      label: 'Highlights on TractStack',
+      items: [
+        // { label: '', link: '/' },
+      ]
+    }, {
+      label: 'Something New 4D Contents Systems!',
+      items: [
+        // { label: '', link: '/' },
+      ]
+    }, {
+      label: 'Shopify',
+      items: [
+        // { label: '', link: '/' },
+      ]
+    }, {
+      label: 'Something New 4D Contents Systems!',
+      items: [
+        // { label: '', link: '/' },
+      ]
+    }, {
+      label: 'Neo4J (AuraDB)!',
+      items: [
+        // { label: '', link: '/' },
+      ]
+    },
+      {
       label: 'Basics',
       items: [
         // { label: '', link: '/' },
