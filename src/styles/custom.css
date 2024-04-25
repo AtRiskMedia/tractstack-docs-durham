@@ -1,39 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* Dark mode colors. */
-:root {
-    --sl-font: 'Outfit' !important;
-
-	--sl-color-accent-low: #341240;
-	--sl-color-accent: #9f00c9;
-	--sl-color-accent-high: #e0b7f0;
-	--sl-color-white: #ffffff;
-	--sl-color-gray-1: #eceef2;
-	--sl-color-gray-2: #c0c2c7;
-	--sl-color-gray-3: #888b96;
-	--sl-color-gray-4: #545861;
-	--sl-color-gray-5: #353841;
-	--sl-color-gray-6: #24272f;
-	--sl-color-black: #17181c;
-	--bg-image: linear-gradient( 94.3deg, rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+/*
+@layer base{
+	:root {
+		--sl-font: 'Outfit' !important;
+	
+		--sl-color-accent-low: #341240;
+		--sl-color-accent: #9f00c9;
+		--sl-color-accent-high: #e0b7f0;
+		--sl-color-white: #ffffff;
+		--sl-color-gray-1: #eceef2;
+		--sl-color-gray-2: #c0c2c7;
+		--sl-color-gray-3: #888b96;
+		--sl-color-gray-4: #545861;
+		--sl-color-gray-5: #353841;
+		--sl-color-gray-6: #24272f;
+		--sl-color-black: #17181c;
+		--bg-image: linear-gradient( 94.3deg, rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+	}
+	*/
+	/* Light mode colors. */
+/*	:root[data-theme='light'] {
+		--sl-color-accent-low: #341240;
+		--sl-color-accent: rgba(104, 104, 207, 0.7); /* Highlighted page on navbar, some headings and social icons */
+/*		--sl-color-accent-high: #f58333;
+		--sl-color-white: #17181c; /* Heading tags */
+/*		--sl-color-gray-1: black; /* Dark/Light theme tag */
+/*		--sl-color-gray-2: black; /* Tagline/paragraph */
+/*		--sl-color-gray-3: #a7b1b7;
+		--sl-color-gray-4: #a7b1b7;
+		--sl-color-gray-5: black; /* Divider line between socials and Light/Dark theme on header*/
+/*		--sl-color-gray-6: #a7b1b7; /* Divider line seperating the TOC from the main page */
+/*		--sl-color-gray-7: rgba(200, 223, 140, 0.3); /* Header */
+/*		--sl-color-black: #fcfcfc; /* Cards/Navbar */
+/*		--bg-image: #fcfcfc;
+	}
 }
-/* Light mode colors. */
-:root[data-theme='light'] {
-	--sl-color-accent-low: #341240;
-	--sl-color-accent: #898e9b; /* Highlighted page on navbar, some headings and social icons */
-	--sl-color-accent-high: #e0b7f0;
-	--sl-color-white: #17181c; /* Heading tags */
-	--sl-color-gray-1: white; /* Dark/Light theme tag */
-	--sl-color-gray-2: black; /* Tagline/paragraph */
-	--sl-color-gray-3: #53565e;
-	--sl-color-gray-4: #6d6f77;
-	--sl-color-gray-5: black; /* Divider line between socials and Light/Dark theme on header*/
-	--sl-color-gray-6: #a4a6ac; /* Divider line seperating the TOC from the main page */
-	--sl-color-gray-7: #55575f; /* Header */
-	--sl-color-black: #c1c3c8; /* Cards/Navbar */
-	--bg-image: linear-gradient(163deg, rgba(237,236,246,0) 0%, rgba(236,226,202,1) 35%, rgba(190,187,156,1) 61%, rgba(219,211,224,1) 100%);
-}
 
+*/
 
-
+/*
 body {
     background-image: var(--bg-image);
 }
+*/
