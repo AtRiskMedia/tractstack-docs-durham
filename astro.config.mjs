@@ -3,6 +3,8 @@ import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [starlight({
@@ -19,8 +21,8 @@ export default defineConfig({
     locales: {
       root: {
         label: 'English',
-        lang: 'en',
-      },
+        lang: 'en'
+      }
     },
     social: {
       github: 'https://github.com/AtRiskMedia',
@@ -75,15 +77,13 @@ export default defineConfig({
       items: [
         // { label: '', link: '/' },
       ]
-    },
-      {
+    }, {
       label: 'Basics',
       items: [
         // { label: '', link: '/' },
       ]
     }]
   }), tailwind({
-    applyBaseStyles: false,
-  }), [sitemap()],
-]
+    applyBaseStyles: false
+  }), [sitemap()], react()]
 });
