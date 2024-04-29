@@ -64,6 +64,10 @@ export default defineConfig({
         {
           label: 'Edit Panes',
           link: '/tutorials/edit-pane',
+        },
+        {
+          label: 'Tutorial Tracker',
+          link: '/tutorial-tracker',
         }
       ]
     }, { // Basics Tab

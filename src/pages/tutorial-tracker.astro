@@ -1,0 +1,19 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { Card } from '@astrojs/starlight/components';
+import { atom } from 'nanostores';
+import { isChecked } from '../components/tutorialStore';
+import CheckboxComponent from '../components/CheckboxComponent.astro'
+---
+
+<StarlightPage frontmatter={{title: 'Tutorial Tracker', description: 'Test description'}}>
+    <Card title="Checklist">
+        <input type="checkbox" id="check1" name="check1"/>
+        <label for="check1">Check 1</label>
+        <CheckboxComponent title="Are you feeling ready?" id="1" tutorialId="tutorial1" unitId="1"></CheckboxComponent>
+        <div id="dialog" style="display: none">Button is checked</div>
+        <CheckboxComponent title="Are you feeling more ready?" id="2" tutorialId="tutorialB" unitId="2"></CheckboxComponent>
+    </Card>
+
+</StarlightPage>
+

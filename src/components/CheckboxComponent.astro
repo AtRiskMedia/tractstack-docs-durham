@@ -1,0 +1,52 @@
+---
+const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
+---
+
+
+
+
+
+<astro-checkbox data-id={id} data-title={title} data-unitid={unitId} data-tutorialid={tutorialId}>
+    <input type="checkbox" id ={id} name={unitId} value={tutorialId} />
+    <label for="checkbox">{title}</label>
+</astro-checkbox>
+
+
+<script>
+    
+    import { isChecked, checkMap, } from './tutorialStore.ts';
+
+   
+
+    class Checkbox extends HTMLElement{
+        constructor(){
+            super();
+            function openDialog(){
+                console.log('check map: ', checkMap.get());
+                console.log('Changing isChecked')
+                if(id){
+                    if (isChecked.get() == true){
+                    isChecked.set(false);
+                    checkMap.setKey(id, false);
+                    }else{
+                        isChecked.set(true);
+                        checkMap.setKey(id, true);
+                    }
+                    console.log('isChecked is ', isChecked.get());
+                }
+            }
+               
+            const id = this.dataset.id;
+            const title = this.dataset.title;
+            const unitId = this.dataset.unitid;
+            const tutorialId = this.dataset.tutorialid;
+            const checkbox = this.querySelector('input');
+            checkbox?.addEventListener('change', () => {
+                console.log('ID: ', id, isChecked.get());
+            });
+            document.getElementById(id)?.addEventListener('change', openDialog);
+        }
+    }
+    customElements.define('astro-checkbox', Checkbox)
+
+</script>
