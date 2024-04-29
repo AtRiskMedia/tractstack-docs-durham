@@ -14,32 +14,37 @@ const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
 
 <script>
     
-    import { isChecked, checkMap, } from './tutorialStore.ts';
+import { isTemplateMiddle } from 'typescript';
+import { isChecked, checkMap } from './tutorialStore.ts';
 
    
 
     class Checkbox extends HTMLElement{
         constructor(){
             super();
-            function openDialog(){
-                console.log('check map: ', checkMap.get());
-                console.log('Changing isChecked')
-                if(id){
-                    if (isChecked.get() == true){
-                    isChecked.set(false);
-                    checkMap.setKey(id, false);
-                    }else{
-                        isChecked.set(true);
-                        checkMap.setKey(id, true);
-                    }
-                    console.log('isChecked is ', isChecked.get());
-                }
-            }
-               
+            
+            // Variables
             const id = this.dataset.id;
             const title = this.dataset.title;
             const unitId = this.dataset.unitid;
             const tutorialId = this.dataset.tutorialid;
+
+            function openDialog(){
+                if(id){
+                    const lookup = checkMap.get();
+                    console.log('Lookup:', lookup );
+                    console.log('Lookup id:', lookup[id]);
+                    if (typeof lookup !== 'undefined' && typeof lookup[id] !== 'undefined' && typeof lookup[id][unitId] !== 'undefined' && lookup[id][unitId]){
+                        console.log('unit Id: ', unitId);
+                        checkMap.setKey(id, {[unitId]:false});
+                    }else{
+                        checkMap.setKey(id, {[unitId]:true});
+                    }
+                    console.log('checkMap is now: ', checkMap.get());
+                }
+            }
+               
+            
             const checkbox = this.querySelector('input');
             checkbox?.addEventListener('change', () => {
                 console.log('ID: ', id, isChecked.get());
