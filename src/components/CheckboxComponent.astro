@@ -34,11 +34,12 @@ import { isChecked, checkMap } from './tutorialStore.ts';
                     const lookup = checkMap.get();
                     console.log('Lookup:', lookup );
                     console.log('Lookup id:', lookup[id]);
-                    if (typeof lookup !== 'undefined' && typeof lookup[id] !== 'undefined' && typeof lookup[id][unitId] !== 'undefined' && lookup[id][unitId]){
+                    // console.log('Conditions: ', typeof lookup !== 'undefined', typeof lookup[id] !== 'undefined', typeof lookup[id][unitId] !== 'undefined', typeof lookup[id][unitId][checked] !== 'undefined', lookup[id][unitId][checked])
+                    if (typeof lookup !== 'undefined' && typeof lookup[id] !== 'undefined' && typeof lookup[id][unitId] !== 'undefined' && typeof lookup[id][unitId].checked !== 'undefined' && lookup[id][unitId].checked){
                         console.log('unit Id: ', unitId);
-                        checkMap.setKey(id, {[unitId]:false});
+                        checkMap.setKey(id, {[unitId]:{checked:false}});
                     }else{
-                        checkMap.setKey(id, {[unitId]:true});
+                        checkMap.setKey(id, {[unitId]:{checked:true}});
                     }
                     console.log('checkMap is now: ', checkMap.get());
                 }
