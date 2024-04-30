@@ -67,7 +67,7 @@ export default defineConfig({
         },
         {
           label: 'Tutorial Tracker',
-          link: '/tutorial-tracker',
+          link: '/tutorials/tutorial-tracker',
         }
       ]
     }, { // Basics Tab

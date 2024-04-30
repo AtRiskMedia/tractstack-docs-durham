@@ -15,14 +15,14 @@ const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
 <script>
     
 import { isTemplateMiddle } from 'typescript';
-import { isChecked, checkMap } from './tutorialStore.ts';
+import { checkMap } from './tutorialStore.ts';
 
    
 
     class Checkbox extends HTMLElement{
         constructor(){
             super();
-            
+
             // Variables
             const id = this.dataset.id;
             const title = this.dataset.title;
@@ -44,10 +44,9 @@ import { isChecked, checkMap } from './tutorialStore.ts';
                 }
             }
                
-            
             const checkbox = this.querySelector('input');
             checkbox?.addEventListener('change', () => {
-                console.log('ID: ', id, isChecked.get());
+                console.log('ID: ', id);
             });
             document.getElementById(id)?.addEventListener('change', openDialog);
         }
