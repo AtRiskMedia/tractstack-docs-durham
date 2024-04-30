@@ -2,10 +2,6 @@
 const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
 ---
 
-
-
-
-
 <astro-checkbox data-id={id} data-title={title} data-unitid={unitId} data-tutorialid={tutorialId}>
     <input type="checkbox" id ={id} name={unitId} value={tutorialId} />
     <label for="checkbox">{title}</label>
@@ -15,14 +11,12 @@ const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
 <script>
     
 import { isTemplateMiddle } from 'typescript';
-import { checkMap } from './tutorialStore.ts';
-
-   
+import { isChecked, checkMap } from './tutorialStore.ts';
 
     class Checkbox extends HTMLElement{
         constructor(){
             super();
-
+            
             // Variables
             const id = this.dataset.id;
             const title = this.dataset.title;
@@ -34,11 +28,12 @@ import { checkMap } from './tutorialStore.ts';
                     const lookup = checkMap.get();
                     console.log('Lookup:', lookup );
                     console.log('Lookup id:', lookup[id]);
-                    if (typeof lookup !== 'undefined' && typeof lookup[id] !== 'undefined' && typeof lookup[id][unitId] !== 'undefined' && lookup[id][unitId]){
+                    // console.log('Conditions: ', typeof lookup !== 'undefined', typeof lookup[id] !== 'undefined', typeof lookup[id][unitId] !== 'undefined', typeof lookup[id][unitId][checked] !== 'undefined', lookup[id][unitId][checked])
+                    if (typeof lookup !== 'undefined' && typeof lookup[id] !== 'undefined' && typeof lookup[id][unitId] !== 'undefined' && typeof lookup[id][unitId].checked !== 'undefined' && lookup[id][unitId].checked){
                         console.log('unit Id: ', unitId);
-                        checkMap.setKey(id, {[unitId]:false});
+                        checkMap.setKey(id, {[unitId]:{checked:false}});
                     }else{
-                        checkMap.setKey(id, {[unitId]:true});
+                        checkMap.setKey(id, {[unitId]:{checked:true}});
                     }
                     console.log('checkMap is now: ', checkMap.get());
                 }
@@ -46,7 +41,7 @@ import { checkMap } from './tutorialStore.ts';
                
             const checkbox = this.querySelector('input');
             checkbox?.addEventListener('change', () => {
-                console.log('ID: ', id);
+                console.log('ID: ', id, isChecked.get());
             });
             document.getElementById(id)?.addEventListener('change', openDialog);
         }
