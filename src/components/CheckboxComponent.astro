@@ -11,7 +11,7 @@ const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
 <script>
     
 import { isTemplateMiddle } from 'typescript';
-import { isChecked, checkMap } from './tutorialStore.ts';
+import { checkMap } from './tutorialStore.ts';
 
     class Checkbox extends HTMLElement{
         constructor(){
@@ -25,15 +25,12 @@ import { isChecked, checkMap } from './tutorialStore.ts';
 
             function openDialog(){
                 if(id){
-                    const lookup = checkMap.get();
-                    console.log('Lookup:', lookup );
-                    console.log('Lookup id:', lookup[id]);
-                    // console.log('Conditions: ', typeof lookup !== 'undefined', typeof lookup[id] !== 'undefined', typeof lookup[id][unitId] !== 'undefined', typeof lookup[id][unitId][checked] !== 'undefined', lookup[id][unitId][checked])
-                    if (typeof lookup !== 'undefined' && typeof lookup[id] !== 'undefined' && typeof lookup[id][unitId] !== 'undefined' && typeof lookup[id][unitId].checked !== 'undefined' && lookup[id][unitId].checked){
-                        console.log('unit Id: ', unitId);
-                        checkMap.setKey(id, {[unitId]:{checked:false, title:{title}, tutorial:{tutorialId}}});
+                    console.log('unit Id: ', unitId);
+                    console.log('condition: ', checkMap.get()[unitId]);
+                      if (checkMap.get()[unitId]?.checked){  
+                        checkMap.setKey(unitId, {checked:false, itemTitle:{title}, tutorial:{tutorialId}});
                     }else{
-                        checkMap.setKey(id, {[unitId]:{checked:true, title:{title}, tutorial:{tutorialId}}});
+                        checkMap.setKey(unitId, {checked:true, itemTitle:{title}, tutorial:{tutorialId}});
                     }
                     console.log('checkMap is now: ', checkMap.get());
                 }
@@ -41,7 +38,6 @@ import { isChecked, checkMap } from './tutorialStore.ts';
                
             const checkbox = this.querySelector('input');
             checkbox?.addEventListener('change', () => {
-                console.log('ID: ', id, isChecked.get());
             });
             document.getElementById(id)?.addEventListener('change', openDialog);
         }
