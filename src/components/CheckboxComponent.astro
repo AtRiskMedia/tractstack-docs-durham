@@ -31,9 +31,9 @@ import { isChecked, checkMap } from './tutorialStore.ts';
                     // console.log('Conditions: ', typeof lookup !== 'undefined', typeof lookup[id] !== 'undefined', typeof lookup[id][unitId] !== 'undefined', typeof lookup[id][unitId][checked] !== 'undefined', lookup[id][unitId][checked])
                     if (typeof lookup !== 'undefined' && typeof lookup[id] !== 'undefined' && typeof lookup[id][unitId] !== 'undefined' && typeof lookup[id][unitId].checked !== 'undefined' && lookup[id][unitId].checked){
                         console.log('unit Id: ', unitId);
-                        checkMap.setKey(id, {[unitId]:{checked:false}});
+                        checkMap.setKey(id, {[unitId]:{checked:false, title:{title}, tutorial:{tutorialId}}});
                     }else{
-                        checkMap.setKey(id, {[unitId]:{checked:true}});
+                        checkMap.setKey(id, {[unitId]:{checked:true, title:{title}, tutorial:{tutorialId}}});
                     }
                     console.log('checkMap is now: ', checkMap.get());
                 }
