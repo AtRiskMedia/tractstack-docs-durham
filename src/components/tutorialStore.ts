@@ -8,7 +8,7 @@ export interface CheckMap {
 }
 export const isChecked = atom(false);
 
-export const checkMap = persistentMap<CheckMap>('checkmap:', {},{
+export const checkMap = persistentMap<CheckMap>('checkmap:', {}, {
   encode: JSON.stringify,
   decode: JSON.parse,
 })
