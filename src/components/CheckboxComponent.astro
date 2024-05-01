@@ -2,6 +2,10 @@
 const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
 ---
 
+
+
+
+
 <astro-checkbox data-id={id} data-title={title} data-unitid={unitId} data-tutorialid={tutorialId}>
     <input type="checkbox" id ={id} name={unitId} value={tutorialId} />
     <label for="checkbox">{title}</label>
@@ -12,6 +16,8 @@ const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
     
 import { isTemplateMiddle } from 'typescript';
 import { isChecked, checkMap } from './tutorialStore.ts';
+
+   
 
     class Checkbox extends HTMLElement{
         constructor(){
@@ -39,6 +45,7 @@ import { isChecked, checkMap } from './tutorialStore.ts';
                 }
             }
                
+            
             const checkbox = this.querySelector('input');
             checkbox?.addEventListener('change', () => {
                 console.log('ID: ', id, isChecked.get());
