@@ -1,0 +1,24 @@
+---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { checkMap } from './tutorialStore';
+
+---
+<astro-tab>
+    <Tabs>
+        <TabItem label=1></TabItem>
+        <TabItem label="2"></TabItem>
+    </Tabs>
+</astro-tab>
+
+<script>
+    console.log(JSON.parse(window.localStorage.getItem('checkmap:2')));
+    class Tab extends HTMLElement{
+        constructor(){
+            super();
+
+
+        }
+    }
+
+    customElements.define('astro-tab', Tab)
+</script>

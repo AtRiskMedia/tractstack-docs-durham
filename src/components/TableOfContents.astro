@@ -2,9 +2,13 @@
 import Default from '@astrojs/starlight/components/TableOfContents.astro'
 import Sponsors from './sponsors.astro'
 import FeedbackComponent from "./FeedbackComponent.astro";
+import Tab from './Tab.astro';
+
 ---
 
 <Default {...Astro.props}><slot/></Default>
+
+<Tab></Tab>
 Sponsored by:
 <Sponsors/>
 <br />

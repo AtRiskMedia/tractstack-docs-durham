@@ -13,39 +13,44 @@ const { title = "", id = "", unitId = "", tutorialId = "" } = Astro.props;
 import { isTemplateMiddle } from 'typescript';
 import { checkMap } from './tutorialStore.ts';
 
-class Checkbox extends HTMLElement {
-    constructor() {
-        super();
-
-        // Variables
-        const id = this.dataset.id;
-        const unitId = this.dataset.unitid;
-
-        // Set initial checked state based on stored value
-        const isChecked = checkMap.get()[unitId]?.checked ?? false;
-        const checkbox = this.querySelector('input');
-        if (checkbox) {
-            checkbox.checked = isChecked;
-        }
-
-        function openDialog() {
-            if (id) {
-                console.log('unit Id: ', unitId);
-                console.log('condition: ', checkMap.get()[unitId]);
-                if (checkMap.get()[unitId]?.checked) {
-                    checkMap.setKey(unitId, { checked: false });
-                } else {
-                    checkMap.setKey(unitId, { checked: true });
-                }
-                console.log('checkMap is now: ', checkMap.get());
+    class Checkbox extends HTMLElement{
+        constructor(){
+            super();
+            
+            // Variables
+            const id = this.dataset.id;
+            const title = this.dataset.title;
+            const unitId = this.dataset.unitid;
+            const tutorialId = this.dataset.tutorialid;
+            // Put all values into the nanostore to save to localhost on start up
+            if (typeof checkMap.get()[unitId] == 'undefined'){
+                checkMap.setKey(unitId, {checked:false, itemTitle:{title}, tutorial:{tutorialId}})
             }
+            // Set initial checked state based on stored value
+            const isChecked = checkMap.get()[unitId]?.checked ?? false;
+            const checkbox = this.querySelector('input');
+            if (checkbox) {
+                checkbox.checked = isChecked;
+            }
+
+            function openDialog(){
+                if(id){
+                    console.log('unit Id: ', unitId);
+                    console.log('condition: ', checkMap.get()[unitId]);
+                      if (checkMap.get()[unitId]?.checked){  
+                        checkMap.setKey(unitId, {checked:false, itemTitle:{title}, tutorial:{tutorialId}});
+                    }else{
+                        checkMap.setKey(unitId, {checked:true, itemTitle:{title}, tutorial:{tutorialId}});
+                    }
+                    console.log('checkMap is now: ', checkMap.get());
+                }
+            }
+               
+            checkbox?.addEventListener('change', () => {
+            });
+            document.getElementById(id)?.addEventListener('change', openDialog);
         }
-
-        checkbox?.addEventListener('change', openDialog);
     }
-}
-
-customElements.define('astro-checkbox', Checkbox);
-
+    customElements.define('astro-checkbox', Checkbox)
 
 </script>
