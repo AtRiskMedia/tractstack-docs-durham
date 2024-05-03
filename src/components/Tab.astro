@@ -1,9 +1,9 @@
 ---
 import { Tabs, TabItem } from '@astrojs/starlight/components';
-import { checkMap } from './tutorialStore';
-
+const id = 'page';
+const path = Astro.url.pathname;
 ---
-<astro-tab>
+<astro-tab data-id={id}>
     <Tabs>
         <TabItem label=1></TabItem>
         <TabItem label="2"></TabItem>
@@ -11,14 +11,17 @@ import { checkMap } from './tutorialStore';
 </astro-tab>
 
 <script>
-    console.log(JSON.parse(window.localStorage.getItem('checkmap:2')));
+    import { checkMap } from './tutorialStore.ts';
+    console.log('example', checkMap)
+
     class Tab extends HTMLElement{
         constructor(){
             super();
 
-
+            // Variables
+            const id = this.dataset.id;
+            console.log('id',id)
         }
     }
-
     customElements.define('astro-tab', Tab)
 </script>
